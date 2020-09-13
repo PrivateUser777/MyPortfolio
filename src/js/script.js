@@ -1,5 +1,9 @@
-window.addEventListener('DOMContentLoaded', () => {
+@@include('./fontawesome.min.js')
+@@include('./vue.js')
+@@include('./vue-vue.js')
 
+window.addEventListener('DOMContentLoaded', () => {
+    
 // // // // // // // // // // // // // // // // // // // // //// // // // // // // // // // // // // // // // //
     //!Меню бургер
     const headerList = document.querySelector('.header__list');
