@@ -15,3 +15,19 @@ new Vue({
         ]
     }
 });
+
+new Vue({
+    el: '#cards',
+    data: {
+        cards: [
+            { title: 'Сайт визитка', text: 'При создании этого сайта использовались следующие технологии: HTML5, CSS3, Vue.js, JavaScript, BEM, Sass, Gulp, Git, Php.', href: 'https://privateuser777.github.io/Delivery/', src: './img/Sites/Site01.jpg' },
+            { title: 'Сайт визитка', text: 'При создании этого сайта использовались следующие технологии: HTML5, CSS3, Vue.js, JavaScript, BEM, Sass, Gulp, Git, Php.', href: 'https://privateuser777.github.io/Delivery/', src: './img/Sites/Site02.jpg' },
+            { title: 'Сайт визитка', text: 'При создании этого сайта использовались следующие технологии: HTML5, CSS3, Vue.js, JavaScript, BEM, Sass, Gulp, Git, Php.', href: 'https://privateuser777.github.io/Delivery/', src: './img/Sites/Site03.jpg' },
+            { title: 'Сайт визитка', text: 'При создании этого сайта использовались следующие технологии: HTML5, CSS3, Vue.js, JavaScript, BEM, Sass, Gulp, Git, Php.', href: 'https://privateuser777.github.io/Delivery/', src: './img/Sites/Site04.jpg' },
+            { title: 'Сайт визитка', text: 'При создании этого сайта использовались следующие технологии: HTML5, CSS3, Vue.js, JavaScript, BEM, Sass, Gulp, Git, Php.', href: 'https://privateuser777.github.io/Delivery/', src: './img/Sites/Site05.jpg' },
+            { title: 'Сайт визитка', text: 'При создании этого сайта использовались следующие технологии: HTML5, CSS3, Vue.js, JavaScript, BEM, Sass, Gulp, Git, Php.', href: 'https://privateuser777.github.io/Delivery/', src: './img/Sites/Site06.jpg' }            
+        ]
+    }
+});
+
+                                                                                                                                                                    

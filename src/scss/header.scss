@@ -57,16 +57,20 @@
 
         &__fullname {
             font-size: 30px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            color: #2f2d2d;
             @media(max-width: 1170px) {
                 @include adaptiv-font(30, 21);
             }
         }
 
         &__profession {
-            font-size: 60px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             font-weight: 500;
+            color: #6b3978;
+            font-family: Oswald;
+            font-size: 90px;
+            font-weight: 400;
             @media(max-width: 1170px) {
                 @include adaptiv-font(60, 46);
             }
@@ -74,6 +78,7 @@
 
         &__desc {
             font-size: 30px;
+            color: #2f2d2d;
             @media(max-width: 1170px) {
                 @include adaptiv-font(30, 23);
             }
@@ -187,7 +192,7 @@
         &:hover {
             color: rgb(113, 2, 218);
             .header__link{
-                color: rgb(2, 56, 204);
+                color: rgb(113, 2, 218);
             }
             &:after {
                 width: 100%;
@@ -222,18 +227,26 @@
             height: 100vh;
             background-color: rgba(0, 0, 0, .8);
             transition: 0.8s all;
-
+            @media(max-width: $md4 + 'px') {
+                width: 80%;
+            }
             &_active {
                 left: 0;
             }
         }
 
         &__item {
-            margin: 10px 0;
+            margin: 30px 0;
         }
 
         &__link {
-            font-size: 18px;
+            font-size: 22px;
+            font-family: "Monstserrat";
+            font-weight: 400;
+            color: #ddd;
+        }
+        .fa{
+            color: #999;
         }
 
         &__burger {

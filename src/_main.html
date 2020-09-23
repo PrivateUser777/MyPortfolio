@@ -1,17 +1,15 @@
-<!-- !Секция Skills -->
+<!-- !Секция "Навыки" -->
 <!-- // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // -->
 <section id = "skills" class="skills">
     <div class="container">
         <div class="skills__body">
-            <h2 class = "skills__title">Мои навыки</h2>
+            <h2 class = "skills__title title">Мои навыки</h2>
             <ul class = "skills__list">
                 <li class = "skills__item" v-for = "card in cards">
                     <div class="skills__desc">
                         <strong>{{card.title}}</strong><br>{{card.text}}
                     </div>
-                    <a class = "skills__link" href="#">
-                        <img class = "skills__image" v-bind:src="card.src" alt="">
-                    </a>
+                    <img class = "skills__image" v-bind:src="card.src" alt="">
                 </li>
             </ul>
         </div>
@@ -19,79 +17,80 @@
 </section>
 <!-- // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // -->
 
-<!-- !Секция фон -->
+<!-- !Секция "Преимущества" -->
 <!-- // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // -->
-<section class="advantages fullscreen" style="background: url('./img/Img04.webp') center / cover no-repeat fixed;">
+<section id = "advantages" class="advantages" style="background: url('./img/fon.jpg') center / cover no-repeat fixed;">
     <div class="container">
         <div class="advantages__body">
-            <h2 class="advantages__title">ПРЕИМУЩЕСТВА</h2>
-            <div class="advantages__columns">
-                <div class="advantages__column">
-                    <div class="advantages__desc">АКТУАЛЬНЫЕ ЦЕНЫ НА СОЗДАНИЕ ВЕБ-САЙТА</div>
-                    <div class="advantages__text">Я беру за мои услуги столько, сколько они действительно стоят. Ничего лишнего. 100% отработка ваших денег</div>
-                </div>
-                <div class="advantages__column">
-                    <div class="advantages__desc">АКТУАЛЬНЫЕ ЦЕНЫ НА СОЗДАНИЕ ВЕБ-САЙТА</div>
-                    <div class="advantages__text">Я беру за мои услуги столько, сколько они действительно стоят. Ничего лишнего. 100% отработка ваших денег</div>
-                </div>
-                <div class="advantages__column">
-                    <div class="advantages__desc">АКТУАЛЬНЫЕ ЦЕНЫ НА СОЗДАНИЕ ВЕБ-САЙТА</div>
-                    <div class="advantages__text">Я беру за мои услуги столько, сколько они действительно стоят. Ничего лишнего. 100% отработка ваших денег</div>
-                </div>
-                <div class="advantages__column">
-                    <div class="advantages__desc">АКТУАЛЬНЫЕ ЦЕНЫ НА СОЗДАНИЕ ВЕБ-САЙТА</div>
-                    <div class="advantages__text">Я беру за мои услуги столько, сколько они действительно стоят. Ничего лишнего. 100% отработка ваших денег</div>
-                </div>
-                <div class="advantages__column">
-                    <div class="advantages__desc">АКТУАЛЬНЫЕ ЦЕНЫ НА СОЗДАНИЕ ВЕБ-САЙТА</div>
-                    <div class="advantages__text">Я беру за мои услуги столько, сколько они действительно стоят. Ничего лишнего. 100% отработка ваших денег</div>
-                </div>
-                <div class="advantages__column">
-                    <div class="advantages__desc">АКТУАЛЬНЫЕ ЦЕНЫ НА СОЗДАНИЕ ВЕБ-САЙТА</div>
-                    <div class="advantages__text">Я беру за мои услуги столько, сколько они действительно стоят. Ничего лишнего. 100% отработка ваших денег</div>
-                </div>
-            </div>
+            <h2 class="advantages__title title">Преимущества</h2>
+            <ul class="advantages__items">
+                <li class = "advantages__item">АКТУАЛЬНЫЕ ЦЕНЫ НА СОЗДАНИЕ ВЕБ-САЙТА. Я беру за мои услуги столько, сколько они действительно стоят. Ничего лишнего. 100% отработка ваших денег</li>
+                <li class="advantages__item">ДЕНЬГИ. Качественно разрабатываю адаптивную верстку на основе макетов для ПК, что существенно экономит Ваш бюджет и не требует заказа дополнительных макетов дизайна.</li>
+                <li class="advantages__item">ГАРАНТИЯ НА ВЕРСТКУ. В течение недели после передачи архива с готовой версткой я бесплатно и сразу исправляю свои ошибки которые могли быть пропущены при приеме работы и замечены позже.</li>
+                <li class="advantages__item">МОЯ ВЕРСТКА ЛЕГКО ИНТЕГРИРУЕТСЯ В ЛЮБУЮ СИСТЕМУ УПРАВЛЕНИЯ КОНТЕНТОМ: WordPress, Joomla, Bitrix, PrestaShop, OpenCart и так далее.</li>
+                <li class="advantages__item">НЕРВЫ. Просьбы пожелания и доработки не структурного характера уже включены в стоимость работ! Так что если вы пропустили ряд мелочей в дизайне они будут внесены в верстку по Вашей просьбе без лишних споров и дополнительных затрат!</li>
+                <li class="advantages__item">ОБСЛУЖИВАНИЕ И ПОДДЕРЖКА САЙТА Быстро устраню любую проблему на вашем сайте, я всегда на связи, и никуда не пропадаю! Связь как по скайпу так и по телефону.</li>
+            </ul>
         </div>
     </div>
 </section>
 <!-- // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // -->
 
-<section class="portfolio">
+<!-- !Секция "Портфолио" -->
+<!-- // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // -->
+<section id="portfolio" class="portfolio">
     <div class="container">
-        <div class="portfolio__body">
-            <h2
-                style="height: 600px; font-size: 40px; text-align: center; padding-top: 280px;">Портфолио</h2>
+        < class="portfolio__body">
+            <h2 class="portfolio__title title">Мои работы</h2>
+            <div id = "cards" class="portfolio__items cards">
+                <div class="cards__card" v-for = "card in cards">
+                    <div class="cards__body">
+                        <div class="cards__title">{{card.title}}</div>
+                        <div class="cards__desc">{{card.text}}</div>
+                        <div class ="cards__btn"><a v-bind:href="card.href" target="_blank">Перейти на сайт</a></div>
+                    </div>
+                    <img v-bind:src="card.src" alt="image" class="cards__image">
+                </div>
+            </div>
+            <a class = "portfolio__btn" href="#"><span>Все работы</span></a>
         </div>
     </div>
 </section>
+<!-- // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // -->
 
-<section class="services" style = "background: rgba(0, 0, 0, 0.438);">
-    <div class="container">
-        <div class="services__body">
-            <h2 style="height: 600px; font-size: 40px; text-align: center; padding-top: 280px;">Услуги</h2>
-        </div>
-    </div>
-</section>
-
-<section class="block-2" style="background: url('./img/Ig01.jpg') center / cover no-repeat fixed; height: 70vh;">
-
-</section>
-
-<section class="about-me">
-    <div class="container">
-        <div class="about-me__body">
-            <h2 style="height: 600px; font-size: 40px; text-align: center; padding-top: 280px;">Обо мне</h2>
-        </div>
-    </div>
-</section>
-
-<section class="contacts" style = "background: rgba(0, 0, 0, 0.438);">
+<!-- !Секция "Контакты" -->
+<!-- // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // -->
+<section id = "contacts" class="contacts" style="background: url('./img/contacts-fon.jpg') center / cover no-repeat fixed;">
     <div class="container">
         <div class="contacts__body">
-            <h2 style="height: 600px; font-size: 40px; text-align: center; padding-top: 280px;">Контакты</h2>
+            <h2 class="contacts__title title">Контакты</h2>
+            <div class="contacts__text">Пожалуйста, оставьте свои контактные данные и сообщение, чтобы я мог с Вами как можно скорее связаться.</div>
+            <form action="" class="contacts__form form">
+                <input type="text" class="form__input form__name" placeholder = "Ваше имя ...">
+                <input type="text" class="form__input form__phone" placeholder = "Ваш номер телефона ...">
+                <input type="text" class="form__input form__email" placeholder = "Ваш Email ...">
+                <textarea name="" id="" cols="30" rows="10" class="form__message" placeholder = "Сообщение ..."></textarea>
+                <button class = "form__btn">Отправить</button>
+            </form>
         </div>
     </div>
 </section>
+<!-- // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
