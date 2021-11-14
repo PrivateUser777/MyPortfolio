@@ -1,0 +1,61 @@
+.footer {
+    background-color: rgb(241, 241, 241);
+    padding: 50px 0;
+    @media(max-width: $md4 + 'px'){
+        padding: 50px 0 10px 0;
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        @media(max-width: $md2 + 'px'){
+            flex-direction: column;
+        }
+    }
+
+    &__email{
+        position: relative;
+        font-size: 25px;
+        font-family: "Oswald";
+        font-weight: 600;
+        letter-spacing: 1.2px;
+        color: #333;
+        @media(max-width: $md2 + 'px') {
+            margin-bottom: 30px;
+        }
+        &:hover{
+            color: rgb(113, 2, 218)
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__item{
+        margin-left: 25px;
+        &:first-child {
+            margin-left: 0;
+        }
+        @media(max-width: $md4 + 'px'){
+            margin-bottom: 20px;
+        }
+    }
+
+    &__social {
+        img{
+            width: 40px;
+            height: 40px;
+            opacity: 0.7;
+            transition: all 0.3s;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+}
+
