@@ -1,8 +1,8 @@
 @@include('./jquery-3.5.1.min.js')
 @@include('./fontawesome.min.js')
-@@include('./vue.js')
+@@include('./vue.global.js')
 @@include('./aos.js')
-@@include('./vue-vue.js')
+@@include('./vue.js')
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -38,20 +38,20 @@ window.addEventListener('DOMContentLoaded', () => {
 
   //!Анимация меню при скроле
 // // // // // // // // // // // // // // // // // // // // //// // // // // // // // // // // // // // // // //
-    window.addEventListener('scroll', () => {
-        let scrollDistance = window.scrollY - 650;
+	window.addEventListener('scroll', () => {
+		let scrollDistance = window.scrollY - 650;
 
-        document.querySelectorAll('section').forEach((el, i) => {
-            if (el.offsetTop - document.querySelector('.header__menu').clientHeight <= scrollDistance) {
-                document.querySelectorAll('.header__link').forEach((el) => {
-                    if (el.classList.contains('menu-active')) {
-                        el.classList.remove('menu-active');
-                    }
-                });
-                document.querySelectorAll('.header__menu li')[i].querySelector('a').classList.add('menu-active');
-            }
-        });
-    });
+		document.querySelectorAll('section').forEach((el, i) => {
+			if (el.offsetTop - document.querySelector('.header__menu').clientHeight <= scrollDistance) {
+					document.querySelectorAll('.header__link').forEach((el) => {
+						if (el.classList.contains('menu-active')) {
+							el.classList.remove('menu-active');
+						}
+					});
+					document.querySelectorAll('.header__menu li')[i].querySelector('a').classList.add('menu-active');
+			}
+		});
+	});
 // // // // // // // // // // // // // // // // // // // // //// // // // // // // // // // // // // // // // //
     
     AOS.init({

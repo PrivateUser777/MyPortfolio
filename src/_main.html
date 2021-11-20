@@ -1,18 +1,18 @@
 <!-- !Секция "Навыки" -->
 <section id = "skills" class="skills">
-    <div class="container">
-        <div class="skills__body">
-            <h2 class = "skills__title title">Мои навыки</h2>
-            <ul class = "skills__list">
-                <li class = "skills__item" v-for = "card in cards">
-                    <div class="skills__desc">
-                        <strong>{{card.title}}</strong><br>{{card.text}}
-                    </div>
-                    <img class = "skills__image" v-bind:src="card.src" alt="">
-                </li>
-            </ul>
-        </div>
-    </div>
+	<div class="container">
+		<div class="skills__body">
+			<h2 class = "skills__title title">Мои навыки</h2>
+			<ul class = "skills__list">
+				<li class = "skills__item" v-for = "card in cards">
+					<div class="skills__desc">
+						<strong>{{card.title}}</strong><br>{{card.text}}
+					</div>
+					<img class = "skills__image" v-bind:src="card.src" alt="">
+				</li>
+			</ul>
+		</div>
+	</div>
 </section>
 
 
@@ -36,22 +36,22 @@
 
 <!-- !Секция "Портфолио" -->
 <section id="portfolio" class="portfolio">
-    <div class="container">
-        <div class="portfolio__body">
-            <h2 class="portfolio__title title">Мои работы</h2>
-            <div id = "cards" class="portfolio__items cards">
-                <div class="cards__card" v-for = "card in cards">
-                    <div class="cards__body">
-                        <div class="cards__title">{{card.title}}</div>
-                        <div class="cards__desc">{{card.text}}</div>
-                        <div class ="cards__btn"><a v-bind:href="card.href" target="_blank">Перейти на сайт</a></div>
-                    </div>
-                    <img v-bind:src="card.src" alt="image" class="cards__image">
-                </div>
-            </div>
-            <a class = "portfolio__btn btn" href="#"><span>Все работы</span></a>
-        </div>
-    </div>
+	<div class="container">
+		<div class="portfolio__body">
+			<h2 class="portfolio__title title">Мои работы</h2>
+			<div id = "cards" class="portfolio__items cards">
+					<div class="cards__card" v-for = "card in cards">
+						<div class="cards__body">
+							<div class="cards__title">{{card.title}}</div>
+							<div class="cards__desc">{{card.text}}</div>
+							<div class ="cards__btn"><a v-bind:href="card.href" target="_blank">Перейти на сайт</a></div>
+						</div>
+						<img v-bind:src="card.src" alt="image" class="cards__image">
+					</div>
+			</div>
+			<a class = "portfolio__btn btn" href="#"><span>Все работы</span></a>
+		</div>
+	</div>
 </section>
 
 
