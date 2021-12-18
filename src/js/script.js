@@ -45,12 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		document.querySelectorAll('section').forEach((el, i) => {
 			if (el.offsetTop - document.querySelector('.header__menu').clientHeight <= scrollDistance) {
-				document.querySelectorAll('.header__link').forEach((el) => {
-					if (el.classList.contains('menu-active')) {
-						el.classList.remove('menu-active');
+				document.querySelectorAll('.header__item').forEach((el) => {
+					if (el.classList.contains('header__item_active')) {
+						el.classList.remove('header__item_active');
 					}
 				});
-				document.querySelectorAll('.header__menu li')[i].querySelector('a').classList.add('menu-active');
+				document.querySelectorAll('.header__item')[i].classList.add('header__item_active');
 			}
 		});
 	});
@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 		console.log(fetchResp.status);
 		if (!fetchResp.ok) {
+			contacts.classList.remove('contacts_loading');
 			throw new Error(`Ошибка по адресу ${url}, статус ошибки ${fetchResp.status}`);
 		}
 		return await fetchResp.text();
@@ -84,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		let error = formValidate(form);
 
 		if(error === 0){
+			contacts.classList.add('contacts_loading');
 			const formData = new FormData(this);
 
 			ajaxSend(formData)
@@ -92,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				form.reset(); // очищаем поля формы 
 			})
 			.catch((err) => console.error(err))
+			contacts.classList.remove('contacts_loading');
 		}
 	}
 

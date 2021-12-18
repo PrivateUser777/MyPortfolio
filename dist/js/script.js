@@ -15689,11 +15689,6 @@ const Cards = {
 				{ title: 'Лендинг, интернет магазин', text: 'Интернет магазин адаптирован под все виды устройств, от Full HD маниторов до мобильных устройств. Сайт является кросбраузерным с валидным кодом.', href: 'http://j90344fw.beget.tech/OnlineStore/', src: './img/Sites/OnlineStore.webp' },
 				{ title: 'Лендинг, сайт финансовых решений', text: 'Данный лендинг адаптирован под все виды устройств, от Full HD маниторов до мобильных устройств. Сайт является кросбраузерным с валидным кодом.', href: 'http://j90344fw.beget.tech/Relvise/', src: './img/Sites/Finance.webp' },
 				{ title: 'Лендинг, доставка грузов из китая', text: 'Данный лендинг адаптирован под все виды устройств, от Full HD маниторов до мобильных устройств. Сайт является кросбраузерным с валидным кодом.', href: 'https://privateuser777.github.io/Delivery/', src: './img/Sites/Site01.webp' },
-				{ title: 'Сайт визитка', text: 'При создании этого сайта использовались следующие технологии: HTML5, CSS3, Vue.js, JavaScript, BEM, Sass, Gulp, Git, Php.', href: '##', src: './img/Sites/Site02.webp' },
-				{ title: 'Сайт визитка', text: 'При создании этого сайта использовались следующие технологии: HTML5, CSS3, Vue.js, JavaScript, BEM, Sass, Gulp, Git, Php.', href: '##', src: './img/Sites/Site03.webp' },
-				{ title: 'Сайт визитка', text: 'При создании этого сайта использовались следующие технологии: HTML5, CSS3, Vue.js, JavaScript, BEM, Sass, Gulp, Git, Php.', href: '##', src: './img/Sites/Site04.webp' },
-				{ title: 'Сайт визитка', text: 'При создании этого сайта использовались следующие технологии: HTML5, CSS3, Vue.js, JavaScript, BEM, Sass, Gulp, Git, Php.', href: '##', src: './img/Sites/Site05.webp' },
-				{ title: 'Сайт визитка', text: 'При создании этого сайта использовались следующие технологии: HTML5, CSS3, Vue.js, JavaScript, BEM, Sass, Gulp, Git, Php.', href: '##', src: './img/Sites/Site06.webp' }            
 			]
 		}
 	}
@@ -15744,12 +15739,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		document.querySelectorAll('section').forEach((el, i) => {
 			if (el.offsetTop - document.querySelector('.header__menu').clientHeight <= scrollDistance) {
-				document.querySelectorAll('.header__link').forEach((el) => {
-					if (el.classList.contains('menu-active')) {
-						el.classList.remove('menu-active');
+				document.querySelectorAll('.header__item').forEach((el) => {
+					if (el.classList.contains('header__item_active')) {
+						el.classList.remove('header__item_active');
 					}
 				});
-				document.querySelectorAll('.header__menu li')[i].querySelector('a').classList.add('menu-active');
+				document.querySelectorAll('.header__item')[i].classList.add('header__item_active');
 			}
 		});
 	});
@@ -15770,6 +15765,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 		console.log(fetchResp.status);
 		if (!fetchResp.ok) {
+			contacts.classList.remove('contacts_loading');
 			throw new Error(`Ошибка по адресу ${url}, статус ошибки ${fetchResp.status}`);
 		}
 		return await fetchResp.text();
@@ -15783,6 +15779,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		let error = formValidate(form);
 
 		if(error === 0){
+			contacts.classList.add('contacts_loading');
 			const formData = new FormData(this);
 
 			ajaxSend(formData)
@@ -15791,6 +15788,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				form.reset(); // очищаем поля формы 
 			})
 			.catch((err) => console.error(err))
+			contacts.classList.remove('contacts_loading');
 		}
 	}
 
