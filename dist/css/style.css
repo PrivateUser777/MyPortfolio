@@ -6171,7 +6171,6 @@ body {
 
 body {
   line-height: 1;
-  font-family: "Montserrat";
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -6226,6 +6225,8 @@ h6 {
 body {
   color: #000;
   font-size: 14px;
+  font-family: "Montserrat";
+  min-width: 320px;
 }
 
 .wrapper {
@@ -7922,13 +7923,14 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   border-radius: 8px;
 }
 
-.btn:hover:after {
-  width: 100%;
-}
-
 .btn span {
   position: relative;
   z-index: 1;
+}
+
+._error {
+  -webkit-box-shadow: 0 0 15px red;
+          box-shadow: 0 0 15px red;
 }
 
 .fullscreen {
@@ -8349,6 +8351,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   margin-bottom: 30px;
   position: relative;
   overflow: hidden;
+  z-index: 2;
 }
 
 .portfolio .cards__card:before {
@@ -8409,7 +8412,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 .portfolio .cards__btn {
   background-color: #9b00d1;
   border-radius: 5px;
-  padding: 7px 0;
   opacity: 0;
   -webkit-transition: all 0.3s ease 1.1s;
   -o-transition: all 0.3s ease 1.1s;
@@ -8424,18 +8426,57 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 .portfolio .cards__btn a {
+  display: block;
   color: #fff;
   font-size: 20px;
+  padding: 7px 0;
 }
 
 .portfolio .cards__image {
-  width: 100%;
   border-radius: 8px;
   border: 2px solid #838383;
+  position: relative;
+  padding: 0 0 57% 0;
+  z-index: -1;
+}
+
+.portfolio .cards__image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .contacts {
-  padding: 80px 0;
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.contacts:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.7) url("../img/loading.gif") center/50px no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 5;
+}
+
+.contacts_loading:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contacts._sending:after {
+  opacity: 1;
+  visibility: visible;
 }
 
 .contacts__title:after {
@@ -8606,29 +8647,65 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   opacity: 1;
 }
 
-@media (max-width: 1170px) and (max-width: 767px) {
+@media (max-width: 1200px) {
+  .contacts {
+    padding-top: calc(40px + 40 * ((100vw - 320px) / 880));
+  }
+
+  .contacts {
+    padding-bottom: calc(40px + 40 * ((100vw - 320px) / 880));
+  }
+}
+
+@media (max-width: 1170px) {
   .title {
-    font-size: calc(44px + 44.2 * ((100vw - 320px) / 1170));
+    font-size: 70px;
   }
 
   .promo .info__fullname {
-    font-size: calc(21px + 15.3 * ((100vw - 320px) / 1170));
+    font-size: 30px;
   }
 
   .promo .info__profession {
-    font-size: calc(46px + 23.8 * ((100vw - 320px) / 1170));
+    font-size: 60px;
   }
 
   .promo .info__desc {
-    font-size: calc(23px + 11.9 * ((100vw - 320px) / 1170));
+    font-size: 30px;
   }
 
   .advantages__title {
-    font-size: calc(35px + 59.5 * ((100vw - 320px) / 1170));
+    font-size: 70px;
   }
 
   .advantages__item {
-    font-size: calc(14px + 6.8 * ((100vw - 320px) / 1170));
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1170px) and (max-width: 1200px) {
+  .title {
+    font-size: calc(44px + 26 * ((100vw - 320px) / 880));
+  }
+
+  .promo .info__fullname {
+    font-size: calc(21px + 9 * ((100vw - 320px) / 880));
+  }
+
+  .promo .info__profession {
+    font-size: calc(46px + 14 * ((100vw - 320px) / 880));
+  }
+
+  .promo .info__desc {
+    font-size: calc(23px + 7 * ((100vw - 320px) / 880));
+  }
+
+  .advantages__title {
+    font-size: calc(35px + 35 * ((100vw - 320px) / 880));
+  }
+
+  .advantages__item {
+    font-size: calc(14px + 4 * ((100vw - 320px) / 880));
   }
 }
 
@@ -8815,10 +8892,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
             flex: 0 1 48%;
   }
 
-  .contacts {
-    padding: 40px 0;
-  }
-
   .contacts__text {
     width: 90%;
     margin-bottom: 50px;
@@ -8881,28 +8954,8 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   }
 }
 
-@media (max-width: 1170px) and (min-width: 767px) {
-  .title {
-    font-size: calc(44px + 26 * (100vw / 1170));
-  }
-
-  .promo .info__fullname {
-    font-size: calc(21px + 9 * (100vw / 1170));
-  }
-
-  .promo .info__profession {
-    font-size: calc(46px + 14 * (100vw / 1170));
-  }
-
-  .promo .info__desc {
-    font-size: calc(23px + 7 * (100vw / 1170));
-  }
-
-  .advantages__title {
-    font-size: calc(35px + 35 * (100vw / 1170));
-  }
-
-  .advantages__item {
-    font-size: calc(14px + 4 * (100vw / 1170));
+@media (any-hover: hover) {
+  .btn:hover:after {
+    width: 100%;
   }
 }

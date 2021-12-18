@@ -40,14 +40,14 @@
 		<div class="portfolio__body">
 			<h2 class="portfolio__title title">Мои работы</h2>
 			<div id = "cards" class="portfolio__items cards">
-					<div class="cards__card" v-for = "card in cards">
-						<div class="cards__body">
-							<div class="cards__title">{{card.title}}</div>
-							<div class="cards__desc">{{card.text}}</div>
-							<div class ="cards__btn"><a v-bind:href="card.href" target="_blank">Перейти на сайт</a></div>
-						</div>
-						<img v-bind:src="card.src" alt="image" class="cards__image">
+				<div class="cards__card" v-for = "card in cards">
+					<div class="cards__body">
+						<div class="cards__title">{{card.title}}</div>
+						<div class="cards__desc">{{card.text}}</div>
+						<div class ="cards__btn"><a v-bind:href="card.href" target="_blank">Перейти на сайт</a></div>
 					</div>
+					<div class="cards__image"><img loading="lazy" v-bind:src="card.src" alt="image"></div>
+				</div>
 			</div>
 			<a class = "portfolio__btn btn" href="#"><span>Все работы</span></a>
 		</div>
@@ -109,20 +109,25 @@
 
 
 <!-- !Секция "Контакты" -->
-<section id = "contacts" class="contacts" style="background: url('./img/contacts-fon.jpg') center / cover no-repeat fixed;">
-    <div class="container">
-        <div class="contacts__body">
-            <h2 class="contacts__title title">Контакты</h2>
-            <div class="contacts__text">Пожалуйста, оставьте свои контактные данные и сообщение, чтобы я мог с Вами как можно скорее связаться.</div>
-            <form action="" class="contacts__form form">
-                <input type="text" class="form__input form__name" placeholder = "Ваше имя ...">
-                <input type="text" class="form__input form__phone" placeholder = "Ваш номер телефона ...">
-                <input type="text" class="form__input form__email" placeholder = "Ваш Email ...">
-                <textarea name="" id="" cols="30" rows="10" class="form__message" placeholder = "Сообщение ..."></textarea>
-                <button class = "form__btn btn"><span>Отправить</span></button>
-            </form>
-        </div>
-    </div>
+<section id = "contacts" class="contacts " style="background: url('./img/contacts-fon.jpg') center / cover no-repeat fixed;">
+	<div class="container">
+		<div class="contacts__body">
+			<h2 class="contacts__title title">Контакты</h2>
+			<div class="contacts__text">Пожалуйста, оставьте свои контактные данные и сообщение, чтобы я мог с Вами как можно скорее связаться.</div>
+			<form id = "form" class="contacts__form form">
+				<input type="text" class="form__input form__name _req" placeholder = "Ваше имя ..." name="Имя">
+				<input type="text" class="form__input form__phone _req" placeholder = "Ваш номер телефона ..." name="Телефон">
+				<input type="email" class="form__input form__email _req _email" placeholder = "Ваш Email ..." name="E-mail">
+				<textarea cols="30" rows="10" class="form__message" placeholder = "Сообщение ..." name="Сообщение"></textarea>
+				<button class = "form__btn btn"><span>Отправить</span></button>
+
+				<!-- Вспомогательные input -->
+				<input type="hidden" name="project_name" value="Сообщение с моего Портфолио http://portfolio777.site/">
+				<input type="hidden" name="admin_email"  value="9034459505@mail.ru">
+				<input type="hidden" name="form_subject" value="Форма обратной связи">
+			</form>
+		</div>
+	</div>
 </section>
 
 

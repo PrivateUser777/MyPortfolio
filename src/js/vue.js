@@ -21,13 +21,14 @@ const Cards = {
    data(){
 		return {
 			cards: [
-				{ title: 'Сайт визитка', text: 'При создании этого сайта использовались следующие технологии: HTML5, CSS3, Vue.js, JavaScript, BEM, Sass, Gulp, Git, Php.', href: 'https://privateuser777.github.io/Delivery/', src: './img/Sites/Site01.webp' },
-				{ title: 'Сайт визитка', text: 'При создании этого сайта использовались следующие технологии: HTML5, CSS3, Vue.js, JavaScript, BEM, Sass, Gulp, Git, Php.', href: 'https://privateuser777.github.io/Delivery/', src: './img/Sites/Site01.webp' },
-				{ title: 'Сайт визитка', text: 'При создании этого сайта использовались следующие технологии: HTML5, CSS3, Vue.js, JavaScript, BEM, Sass, Gulp, Git, Php.', href: 'https://privateuser777.github.io/Delivery/', src: './img/Sites/Site02.webp' },
-				{ title: 'Сайт визитка', text: 'При создании этого сайта использовались следующие технологии: HTML5, CSS3, Vue.js, JavaScript, BEM, Sass, Gulp, Git, Php.', href: 'https://privateuser777.github.io/Delivery/', src: './img/Sites/Site03.webp' },
-				{ title: 'Сайт визитка', text: 'При создании этого сайта использовались следующие технологии: HTML5, CSS3, Vue.js, JavaScript, BEM, Sass, Gulp, Git, Php.', href: 'https://privateuser777.github.io/Delivery/', src: './img/Sites/Site04.webp' },
-				{ title: 'Сайт визитка', text: 'При создании этого сайта использовались следующие технологии: HTML5, CSS3, Vue.js, JavaScript, BEM, Sass, Gulp, Git, Php.', href: 'https://privateuser777.github.io/Delivery/', src: './img/Sites/Site05.webp' },
-				{ title: 'Сайт визитка', text: 'При создании этого сайта использовались следующие технологии: HTML5, CSS3, Vue.js, JavaScript, BEM, Sass, Gulp, Git, Php.', href: 'https://privateuser777.github.io/Delivery/', src: './img/Sites/Site06.webp' }            
+				{ title: 'Лендинг, интернет магазин', text: 'Интернет магазин адаптирован под все виды устройств, от Full HD маниторов до мобильных устройств. Сайт является кросбраузерным с валидным кодом.', href: 'http://j90344fw.beget.tech/OnlineStore/', src: './img/Sites/OnlineStore.webp' },
+				{ title: 'Лендинг, сайт финансовых решений', text: 'Данный лендинг адаптирован под все виды устройств, от Full HD маниторов до мобильных устройств. Сайт является кросбраузерным с валидным кодом.', href: 'http://j90344fw.beget.tech/Relvise/', src: './img/Sites/Finance.webp' },
+				{ title: 'Лендинг, доставка грузов из китая', text: 'Данный лендинг адаптирован под все виды устройств, от Full HD маниторов до мобильных устройств. Сайт является кросбраузерным с валидным кодом.', href: 'https://privateuser777.github.io/Delivery/', src: './img/Sites/Site01.webp' },
+				{ title: 'Сайт визитка', text: 'При создании этого сайта использовались следующие технологии: HTML5, CSS3, Vue.js, JavaScript, BEM, Sass, Gulp, Git, Php.', href: '##', src: './img/Sites/Site02.webp' },
+				{ title: 'Сайт визитка', text: 'При создании этого сайта использовались следующие технологии: HTML5, CSS3, Vue.js, JavaScript, BEM, Sass, Gulp, Git, Php.', href: '##', src: './img/Sites/Site03.webp' },
+				{ title: 'Сайт визитка', text: 'При создании этого сайта использовались следующие технологии: HTML5, CSS3, Vue.js, JavaScript, BEM, Sass, Gulp, Git, Php.', href: '##', src: './img/Sites/Site04.webp' },
+				{ title: 'Сайт визитка', text: 'При создании этого сайта использовались следующие технологии: HTML5, CSS3, Vue.js, JavaScript, BEM, Sass, Gulp, Git, Php.', href: '##', src: './img/Sites/Site05.webp' },
+				{ title: 'Сайт визитка', text: 'При создании этого сайта использовались следующие технологии: HTML5, CSS3, Vue.js, JavaScript, BEM, Sass, Gulp, Git, Php.', href: '##', src: './img/Sites/Site06.webp' }            
 			]
 		}
 	}
